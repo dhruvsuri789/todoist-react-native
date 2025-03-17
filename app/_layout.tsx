@@ -1,7 +1,7 @@
 import { Colors } from "@/constants/Colors";
 import { tokenCache } from "@/utils/cache";
 import { ClerkLoaded, ClerkProvider, useAuth } from "@clerk/clerk-expo";
-import { Stack, useRouter } from "expo-router";
+import { Stack, usePathname, useRouter, useSegments } from "expo-router";
 import { useEffect } from "react";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 
@@ -16,15 +16,19 @@ if (!publishableKey) {
 const InitialLayout = () => {
   const { isLoaded, isSignedIn } = useAuth();
   const router = useRouter();
+  const segments = useSegments();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!isLoaded) return;
-    console.log("isLoaded", isLoaded);
-    console.log("isSignedIn", isSignedIn);
 
-    if (!isSignedIn) router.replace("/");
+    const inAuthGroup = segments[0] === "(auth)";
 
-    router.replace("/(auth)/(tabs)/today");
+    if (isSignedIn && !inAuthGroup) {
+      router.replace("/(auth)/(tabs)/today");
+    } else if (!isSignedIn && pathname !== "/") {
+      router.replace("/");
+    }
   }, [isLoaded, isSignedIn]);
 
   if (!isLoaded)

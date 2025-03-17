@@ -1,9 +1,17 @@
 import { Tabs } from "@/components/Tabs";
+import { Colors } from "@/constants/Colors";
 import { StyleSheet } from "react-native";
 
 const Layout = () => {
   return (
-    <Tabs>
+    <Tabs
+      ignoresTopSafeArea
+      hapticFeedbackEnabled
+      screenOptions={{
+        tabBarActiveTintColor: Colors.primary,
+        // tabBarInactiveTintColor: Colors.dark,
+      }}
+    >
       <Tabs.Screen
         name="today"
         options={{
@@ -16,7 +24,7 @@ const Layout = () => {
       <Tabs.Screen
         name="upcoming"
         options={{
-          title: "Upmcoming",
+          title: "Upcoming",
           tabBarIcon: () => ({
             sfSymbol: "calendar",
           }),
