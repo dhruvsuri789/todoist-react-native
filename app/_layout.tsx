@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { tokenCache } from "@/utils/cache";
 import { ClerkLoaded, ClerkProvider } from "@clerk/clerk-expo";
 import { Stack } from "expo-router";
@@ -11,7 +12,16 @@ if (!publishableKey) {
 }
 
 const InitialLayout = () => {
-  return <Stack />;
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: Colors.background },
+      }}
+    >
+      <Stack.Screen name="index" />
+    </Stack>
+  );
 };
 
 export default function RootLayout() {
