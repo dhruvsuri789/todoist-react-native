@@ -50,7 +50,15 @@
           }
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "todoist-react-native",
+          "organization": "99dev-4g"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
