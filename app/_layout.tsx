@@ -1,8 +1,13 @@
 import { Colors } from "@/constants/Colors";
+import migrations from "@/db/migrations/drizzle/migrations";
+import { addDummyData } from "@/utils/addDummyData";
 import { tokenCache } from "@/utils/cache";
 import { ClerkLoaded, ClerkProvider, useAuth } from "@clerk/clerk-expo";
+import { drizzle } from "drizzle-orm/expo-sqlite";
+import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
 import { Stack, usePathname, useRouter, useSegments } from "expo-router";
-import { useEffect } from "react";
+import { openDatabaseSync, SQLiteProvider } from "expo-sqlite";
+import { Suspense, useEffect } from "react";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Toaster } from "sonner-native";
@@ -55,16 +60,40 @@ const InitialLayout = () => {
 };
 
 export default function RootLayout() {
+  // Can enable change listener here or down in SQLiteProvider
+  // const expoDB = openDatabaseSync("todoist", {enableChangeListener: true});
+  const expoDB = openDatabaseSync("todoist");
+  const db = drizzle(expoDB);
+  const { success, error } = useMigrations(db, migrations);
+
+  useEffect(() => {
+    if (!success) return;
+
+    addDummyData(db);
+  }, [success]);
+
   return (
     <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
       <ClerkLoaded>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <Toaster />
-          <InitialLayout />
-        </GestureHandlerRootView>
+        <Suspense fallback={<Loading />}>
+          <SQLiteProvider
+            databaseName="todoist"
+            useSuspense
+            options={{ enableChangeListener: true }}
+          >
+            <GestureHandlerRootView style={{ flex: 1 }}>
+              <Toaster />
+              <InitialLayout />
+            </GestureHandlerRootView>
+          </SQLiteProvider>
+        </Suspense>
       </ClerkLoaded>
     </ClerkProvider>
   );
+}
+
+function Loading() {
+  return <ActivityIndicator size={"large"} color={Colors.primary} />;
 }
 
 const styles = StyleSheet.create({
