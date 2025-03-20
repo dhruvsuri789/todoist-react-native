@@ -3,7 +3,6 @@ import TaskRow from "@/components/TaskRow";
 import { Colors } from "@/constants/Colors";
 import { projects, todos } from "@/db/schema";
 import { Todo } from "@/types/interfaces";
-import * as Sentry from "@sentry/react-native";
 import { format } from "date-fns";
 import { eq } from "drizzle-orm";
 import { drizzle, useLiveQuery } from "drizzle-orm/expo-sqlite";
@@ -11,7 +10,6 @@ import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
 import { useSQLiteContext } from "expo-sqlite";
 import { useEffect, useState } from "react";
 import {
-  Button,
   RefreshControl,
   SectionList,
   StyleSheet,
@@ -100,12 +98,12 @@ const Index = () => {
           <RefreshControl refreshing={false} onRefresh={() => {}} />
         }
       />
-      <Button
+      {/* <Button
         title="Try!"
         onPress={() => {
           Sentry.captureException(new Error("First error"));
         }}
-      />
+      /> */}
       <Fab />
     </View>
   );
