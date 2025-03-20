@@ -8,6 +8,7 @@ import { drizzle, useLiveQuery } from "drizzle-orm/expo-sqlite";
 import { useRouter } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import RevenueCatUI, { PAYWALL_RESULT } from "react-native-purchases-ui";
 import Animated, { LinearTransition } from "react-native-reanimated";
 import * as ContextMenu from "zeego/context-menu";
 
@@ -20,6 +21,8 @@ const Index = () => {
 
   const { data } = useLiveQuery(drizzleDb.select().from(projects), []);
 
+  // const { isPro } = useRevenueCat();
+
   const onDeleteProject = async (id: number) => {
     await drizzleDb.delete(projects).where(eq(projects.id, id));
   };
@@ -27,9 +30,29 @@ const Index = () => {
   const onNewProject = async () => {
     if (!isPro && data.length >= 5) {
       // go pro
-      // router.push("/browse/upgrade");
+      // Setup Apple Developer program and RevenueCat for this to work
+      goPro();
     } else {
       router.push("/browse/new-project");
+    }
+  };
+
+  const goPro = async () => {
+    const paywallResult: PAYWALL_RESULT = await RevenueCatUI.presentPaywall({
+      displayCloseButton: true,
+    });
+
+    console.log(paywallResult);
+    switch (paywallResult) {
+      case PAYWALL_RESULT.NOT_PRESENTED:
+      case PAYWALL_RESULT.ERROR:
+      case PAYWALL_RESULT.CANCELLED:
+        return false;
+      case PAYWALL_RESULT.PURCHASED:
+      case PAYWALL_RESULT.RESTORED:
+        return true;
+      default:
+        return false;
     }
   };
 

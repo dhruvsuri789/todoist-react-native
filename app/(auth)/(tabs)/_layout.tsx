@@ -4,6 +4,7 @@ import { StyleSheet } from "react-native";
 
 const Layout = () => {
   return (
+    // <RevenueCatProvider></RevenueCatProvider>
     <Tabs
       ignoresTopSafeArea
       hapticFeedbackEnabled
