@@ -7,34 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED20AAEB38B47E6A35135DC /* blue-Icon-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF5A0C8D4CF4915AF457541 /* blue-Icon-60x60@2x.png */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3D29BAFFE1B94AFB975C3C80 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E341054174A6B8EECDCA0 /* noop-file.swift */; };
+		179BCC57229BAD3730F3A124 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 601E35BE077E0443FFF72E55 /* PrivacyInfo.xcprivacy */; };
+		18652814767C4D7CBA8B1429 /* green-Icon-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A931C5B3A59748EA94959346 /* green-Icon-60x60@2x.png */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		4EBE7E4254F84DF59D0581B1 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807183AC4CF34C16A901B9D3 /* noop-file.swift */; };
+		5E23E905F1CF42B7B1A70C05 /* default-Icon-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57122BAFC213455DBCCF9D11 /* default-Icon-60x60@2x.png */; };
+		5E5D5FA5115640049341DCC1 /* dark-Icon-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DDCC64A39241CFBD230AA2 /* dark-Icon-60x60@3x.png */; };
+		5F7E92C2E4BA48C59C67CB18 /* dark-Icon-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA19552B5864D99BB2394D9 /* dark-Icon-60x60@2x.png */; };
+		94E7811F48E844C49AD22628 /* default-Icon-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18027A808614970B8A6EFE7 /* default-Icon-60x60@3x.png */; };
+		9E52D5B4DBDE9C7147CB82BF /* Pods_TodoistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CDCD981AFFF9FA072DDA2B /* Pods_TodoistApp.framework */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
-		B191AD3543ADB4593BD850AF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6142191A8E0D5FD58EDD36BD /* PrivacyInfo.xcprivacy */; };
+		B216554BCD364CA89FAF8850 /* blue-Icon-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 979B0EFD3B4448829A91B5BD /* blue-Icon-60x60@3x.png */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		DC47B4B6C24DDAF78CB74941 /* Pods_TodoistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0675B70B381D9D3B5354240C /* Pods_TodoistApp.framework */; };
+		FB55D0073C3D445BBB03A6C2 /* green-Icon-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC688A6FEC4D474697D79B36 /* green-Icon-60x60@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0675B70B381D9D3B5354240C /* Pods_TodoistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* TodoistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TodoistApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TodoistApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TodoistApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TodoistApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TodoistApp/main.m; sourceTree = "<group>"; };
-		6142191A8E0D5FD58EDD36BD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = TodoistApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		57122BAFC213455DBCCF9D11 /* default-Icon-60x60@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "default-Icon-60x60@2x.png"; path = "TodoistApp/DynamicAppIcons/default-Icon-60x60@2x.png"; sourceTree = "<group>"; };
+		601E35BE077E0443FFF72E55 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = TodoistApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-TodoistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistApp.debug.xcconfig"; path = "Target Support Files/Pods-TodoistApp/Pods-TodoistApp.debug.xcconfig"; sourceTree = "<group>"; };
-		72191FA208A840788370A8AD /* TodoistApp-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "TodoistApp-Bridging-Header.h"; path = "TodoistApp/TodoistApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-TodoistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistApp.release.xcconfig"; path = "Target Support Files/Pods-TodoistApp/Pods-TodoistApp.release.xcconfig"; sourceTree = "<group>"; };
+		807183AC4CF34C16A901B9D3 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "TodoistApp/noop-file.swift"; sourceTree = "<group>"; };
+		831DB827A332463BB941E060 /* TodoistApp-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "TodoistApp-Bridging-Header.h"; path = "TodoistApp/TodoistApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		94CDCD981AFFF9FA072DDA2B /* Pods_TodoistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979B0EFD3B4448829A91B5BD /* blue-Icon-60x60@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "blue-Icon-60x60@3x.png"; path = "TodoistApp/DynamicAppIcons/blue-Icon-60x60@3x.png"; sourceTree = "<group>"; };
+		A931C5B3A59748EA94959346 /* green-Icon-60x60@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "green-Icon-60x60@2x.png"; path = "TodoistApp/DynamicAppIcons/green-Icon-60x60@2x.png"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = TodoistApp/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B61E341054174A6B8EECDCA0 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "TodoistApp/noop-file.swift"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		C3DDCC64A39241CFBD230AA2 /* dark-Icon-60x60@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "dark-Icon-60x60@3x.png"; path = "TodoistApp/DynamicAppIcons/dark-Icon-60x60@3x.png"; sourceTree = "<group>"; };
+		CC688A6FEC4D474697D79B36 /* green-Icon-60x60@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "green-Icon-60x60@3x.png"; path = "TodoistApp/DynamicAppIcons/green-Icon-60x60@3x.png"; sourceTree = "<group>"; };
+		CEA19552B5864D99BB2394D9 /* dark-Icon-60x60@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "dark-Icon-60x60@2x.png"; path = "TodoistApp/DynamicAppIcons/dark-Icon-60x60@2x.png"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F18027A808614970B8A6EFE7 /* default-Icon-60x60@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "default-Icon-60x60@3x.png"; path = "TodoistApp/DynamicAppIcons/default-Icon-60x60@3x.png"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TodoistApp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		FFF5A0C8D4CF4915AF457541 /* blue-Icon-60x60@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "blue-Icon-60x60@2x.png"; path = "TodoistApp/DynamicAppIcons/blue-Icon-60x60@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,13 +58,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC47B4B6C24DDAF78CB74941 /* Pods_TodoistApp.framework in Frameworks */,
+				9E52D5B4DBDE9C7147CB82BF /* Pods_TodoistApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4477C0054F4CB5B26420A2 /* DynamicAppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				57122BAFC213455DBCCF9D11 /* default-Icon-60x60@2x.png */,
+				F18027A808614970B8A6EFE7 /* default-Icon-60x60@3x.png */,
+				CEA19552B5864D99BB2394D9 /* dark-Icon-60x60@2x.png */,
+				C3DDCC64A39241CFBD230AA2 /* dark-Icon-60x60@3x.png */,
+				A931C5B3A59748EA94959346 /* green-Icon-60x60@2x.png */,
+				CC688A6FEC4D474697D79B36 /* green-Icon-60x60@3x.png */,
+				FFF5A0C8D4CF4915AF457541 /* blue-Icon-60x60@2x.png */,
+				979B0EFD3B4448829A91B5BD /* blue-Icon-60x60@3x.png */,
+			);
+			name = DynamicAppIcons;
+			path = "";
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* TodoistApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +91,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				B61E341054174A6B8EECDCA0 /* noop-file.swift */,
-				72191FA208A840788370A8AD /* TodoistApp-Bridging-Header.h */,
-				6142191A8E0D5FD58EDD36BD /* PrivacyInfo.xcprivacy */,
+				807183AC4CF34C16A901B9D3 /* noop-file.swift */,
+				831DB827A332463BB941E060 /* TodoistApp-Bridging-Header.h */,
+				0C4477C0054F4CB5B26420A2 /* DynamicAppIcons */,
+				601E35BE077E0443FFF72E55 /* PrivacyInfo.xcprivacy */,
 			);
 			name = TodoistApp;
 			sourceTree = "<group>";
@@ -70,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				0675B70B381D9D3B5354240C /* Pods_TodoistApp.framework */,
+				94CDCD981AFFF9FA072DDA2B /* Pods_TodoistApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,14 +180,14 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TodoistApp" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				E018FAF5B5263D9C17D29DF4 /* [Expo] Configure project */,
+				5757AE4A68F14A1CC881C900 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				3D552FA1DC313DBB401162AB /* [CP] Embed Pods Frameworks */,
-				AC0C2E3AF4EF482C9F1268D6 /* Upload Debug Symbols to Sentry */,
+				F004BD8818B245F5A2E2E724 /* Upload Debug Symbols to Sentry */,
+				E8970B618C9AEA55EFB30194 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,7 +237,15 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				B191AD3543ADB4593BD850AF /* PrivacyInfo.xcprivacy in Resources */,
+				5E23E905F1CF42B7B1A70C05 /* default-Icon-60x60@2x.png in Resources */,
+				94E7811F48E844C49AD22628 /* default-Icon-60x60@3x.png in Resources */,
+				5F7E92C2E4BA48C59C67CB18 /* dark-Icon-60x60@2x.png in Resources */,
+				5E5D5FA5115640049341DCC1 /* dark-Icon-60x60@3x.png in Resources */,
+				18652814767C4D7CBA8B1429 /* green-Icon-60x60@2x.png in Resources */,
+				FB55D0073C3D445BBB03A6C2 /* green-Icon-60x60@3x.png in Resources */,
+				0ED20AAEB38B47E6A35135DC /* blue-Icon-60x60@2x.png in Resources */,
+				B216554BCD364CA89FAF8850 /* blue-Icon-60x60@3x.png in Resources */,
+				179BCC57229BAD3730F3A124 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,25 +289,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D552FA1DC313DBB401162AB /* [CP] Embed Pods Frameworks */ = {
+		5757AE4A68F14A1CC881C900 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TodoistApp/Pods-TodoistApp-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExpoSQLite/crsqlite.framework/crsqlite",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/crsqlite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoistApp/Pods-TodoistApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-TodoistApp/expo-configure-project.sh\"\n";
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -318,7 +358,27 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoistApp/Pods-TodoistApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC0C2E3AF4EF482C9F1268D6 /* Upload Debug Symbols to Sentry */ = {
+		E8970B618C9AEA55EFB30194 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoistApp/Pods-TodoistApp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExpoSQLite/crsqlite.framework/crsqlite",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/crsqlite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoistApp/Pods-TodoistApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F004BD8818B245F5A2E2E724 /* Upload Debug Symbols to Sentry */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,26 +390,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode-debug-files.sh";
-		};
-		E018FAF5B5263D9C17D29DF4 /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-TodoistApp/expo-configure-project.sh\"\n";
+			shellScript = "/bin/sh `${NODE_BINARY:-node} --print \"require('path').dirname(require.resolve('@sentry/react-native/package.json')) + '/scripts/sentry-xcode-debug-files.sh'\"`";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -361,7 +402,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				3D29BAFFE1B94AFB975C3C80 /* noop-file.swift in Sources */,
+				4EBE7E4254F84DF59D0581B1 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
