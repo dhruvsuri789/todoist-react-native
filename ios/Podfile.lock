@@ -1977,6 +1977,27 @@ PODS:
   - RevenueCat (5.20.0)
   - RevenueCatUI (5.20.0):
     - RevenueCat (= 5.20.0)
+  - RNDateTimePicker (8.2.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNGestureHandler (2.20.2):
     - DoubleConversion
     - glog
@@ -2310,6 +2331,7 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPaywalls (from `../node_modules/react-native-purchases-ui`)
   - RNPurchases (from `../node_modules/react-native-purchases`)
@@ -2526,6 +2548,8 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNDateTimePicker:
+    :path: "../node_modules/@react-native-community/datetimepicker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNPaywalls:
@@ -2646,6 +2670,7 @@ SPEC CHECKSUMS:
   ReactCommon: 885ac625dd73cd6585ca5c1ad5c09e1ce848b015
   RevenueCat: e47ff90dfd271fde155a4befe48e8fc02e8281e4
   RevenueCatUI: aa9362b300c9025d30a1b36a5cd396d0313fc8ea
+  RNDateTimePicker: dd58d8235c3d12d349c043c2d9bcedcbb513f106
   RNGestureHandler: 1e33ee267aaf61bbab6089d32df3b38c3024e3dd
   RNPaywalls: ff0a45a3076e6ee753834dd2dcf6126af9a32aff
   RNPurchases: 1972640d882be27a1cc1f05a408876902f706bfb

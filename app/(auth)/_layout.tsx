@@ -1,8 +1,10 @@
-import { Stack } from "expo-router";
-import { StyleSheet, useWindowDimensions } from "react-native";
+import { Colors } from "@/constants/Colors";
+import { Stack, useRouter } from "expo-router";
+import { Button, StyleSheet, useWindowDimensions } from "react-native";
 
 const Layout = () => {
   const { height } = useWindowDimensions();
+  const router = useRouter();
 
   return (
     <Stack screenOptions={{ contentStyle: { backgroundColor: "#fff" } }}>
@@ -31,6 +33,24 @@ const Layout = () => {
           sheetGrabberVisible: false,
           sheetExpandsWhenScrolledToEdge: false,
           sheetCornerRadius: 10,
+        }}
+      />
+      <Stack.Screen
+        name="task/date-select"
+        options={{
+          presentation: "formSheet",
+          title: "Schedule",
+          sheetAllowedDetents: height > 700 ? [0.5, 0.9] : "fitToContents",
+          sheetGrabberVisible: true,
+          sheetExpandsWhenScrolledToEdge: false,
+          sheetCornerRadius: 10,
+          headerLeft: () => (
+            <Button
+              title="Cancel"
+              onPress={() => router.back()}
+              color={Colors.primary}
+            />
+          ),
         }}
       />
     </Stack>
