@@ -10,11 +10,15 @@ import { useSQLiteContext } from "expo-sqlite";
 import { useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import {
+  Dimensions,
+  FlatList,
+  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from "react-native";
 import { useMMKVString } from "react-native-mmkv";
@@ -50,6 +54,8 @@ const TodoForm = ({ todo }: TodoFormProps) => {
   const db = useSQLiteContext();
   const drizzleDb = drizzle(db);
   const { data } = useLiveQuery(drizzleDb.select().from(projects), []);
+
+  const [showProjects, setShowProjects] = useState(false);
 
   const [selectedProject, setSelectedProject] = useState<Project>(
     todo?.project_id
@@ -94,6 +100,8 @@ const TodoForm = ({ todo }: TodoFormProps) => {
           console.log("Inserted todo");
         });
     }
+
+    router.dismiss();
   };
 
   const changeDate = () => {
@@ -121,6 +129,11 @@ const TodoForm = ({ todo }: TodoFormProps) => {
     }
   };
 
+  const onProjectPress = (project: Project) => {
+    setSelectedProject(project);
+    setShowProjects(false);
+  };
+
   const [selectedDate, setSelectedDate] = useState<Date>(
     todo?.due_date ? new Date(todo.due_date) : new Date()
   );
@@ -141,6 +154,40 @@ const TodoForm = ({ todo }: TodoFormProps) => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>
+      <Modal
+        visible={showProjects}
+        onRequestClose={() => setShowProjects(false)}
+        transparent={true}
+        animationType="fade"
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <FlatList
+              data={data}
+              showsVerticalScrollIndicator={false}
+              style={{ borderRadius: 12 }}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  style={styles.projectButton}
+                  onPress={() => onProjectPress(item)}
+                >
+                  <Text style={{ color: item.color }}>#</Text>
+                  <Text style={styles.projectButtonText}>{item.name}</Text>
+                </TouchableOpacity>
+              )}
+              keyExtractor={(item) => item.id.toString()}
+              ItemSeparatorComponent={() => (
+                <View
+                  style={{
+                    height: StyleSheet.hairlineWidth,
+                    backgroundColor: Colors.lightBorder,
+                  }}
+                />
+              )}
+            />
+          </View>
+        </View>
+      </Modal>
       <ScrollView
         contentContainerStyle={styles.container}
         keyboardShouldPersistTaps="always"
@@ -251,18 +298,40 @@ const TodoForm = ({ todo }: TodoFormProps) => {
         </ScrollView>
         <View style={styles.bottomRow}>
           <Pressable
-            onPress={() => {}}
+            onPress={() => setShowProjects(true)}
             style={({ pressed }) => {
               return [
                 styles.outlinedButton,
                 {
                   backgroundColor: pressed ? Colors.lightBorder : "transparent",
+                  borderColor: selectedProject.color,
                 },
               ];
             }}
           >
-            <Ionicons name="pricetags-outline" size={20} color={Colors.dark} />
-            <Text style={styles.outlinedButtonText}>Labels</Text>
+            {selectedProject.id === 1 && (
+              <Ionicons
+                name="file-tray-outline"
+                size={20}
+                color={Colors.dark}
+              />
+            )}
+            {selectedProject.id !== 1 && (
+              <Text style={{ color: selectedProject.color }}>#</Text>
+            )}
+            <Text
+              style={[
+                styles.outlinedButtonText,
+                { color: selectedProject.color },
+              ]}
+            >
+              {selectedProject.name}
+            </Text>
+            <Ionicons
+              name="caret-down"
+              size={14}
+              color={selectedProject.color}
+            />
           </Pressable>
           <Pressable
             onPress={handleSubmit(onSubmit)}
@@ -326,5 +395,30 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     borderRadius: 25,
     padding: 6,
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    margin: 20,
+    width: Dimensions.get("window").width - 60,
+    height: 200,
+    backgroundColor: "white",
+    borderRadius: 12,
+    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+    elevation: 5,
+  },
+  projectButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    padding: 14,
+    borderRadius: 5,
+    gap: 14,
+  },
+  projectButtonText: {
+    fontSize: 16,
   },
 });
